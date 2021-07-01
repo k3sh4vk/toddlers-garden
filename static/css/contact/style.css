@@ -5,3 +5,70 @@
     top: 0;
     z-index:-1;
 }
+
+tr {
+    padding: 0 20%;
+}
+
+label {
+    text-align: center;
+    padding: 2px 3px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 20px;
+    align: right;
+    color: #ff3333;
+    letter-spacing: 2px;
+    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;
+}
+
+.message {
+    text-align: center;
+    padding: 2px 3px;
+    font-size: 20px;
+    color: #ff3333;
+    letter-spacing: 2px;
+    font-family: 'Bradley Hand', cursive;
+    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="number"], textarea {
+    border: 2px solid #F4511E;
+    border-radius: 8px;
+    padding: 10px 27px;
+    font-size: 16px;
+    width: 300px;
+    background-color: #EED27E;
+    font-family: 'Bradley Hand', cursive;
+    }
+
+input[type="number"] {
+    maxlength: 10;
+}
+
+.button {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    color: green;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration-style: solid;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    font-family: 'Bradley Hand', cursive;
+    }
+
+.button:hover {
+    background-color: #4CAF50;
+    color: white;
+    }
+
+.fadeout {
+    animation: fadeinout 2s linear forwards;
+    }
+
+@keyframes fadeinout {
+    0%,60%  { opacity: 1; }
+    100%    { opacity: 0; }
+    }

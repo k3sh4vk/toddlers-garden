@@ -16,8 +16,20 @@
     <div class="vl" style="left: 50%; background-color: #FFEE58; width: 25%; height: 100%;"></div>
     <div class="vl" style="left: 75%; background-color: #00E676; width: 25%; height: 100%;"></div>
 
-
-
+    <form method="POST">
+        <table align="center">
+                {{form.as_table}}
+                {% csrf_token %}
+        </table>
+        <div align="center"><input type="Submit" class="button" name="" value="Submit"></div>
+    </form>
+    <div align="center">
+        {% if messages %}
+        {% for message in messages %}
+            <div class="message fadeout"><br><h1>{{ message }}</h1></div>
+        {% endfor %}
+        {% endif %}
+    </div>
 {% endblock %}
 </body>
 </html>
