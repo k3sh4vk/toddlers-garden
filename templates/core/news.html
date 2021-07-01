@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}<title>Latest Announcement</title>{% endblock %}
+{% block custom_body %}
+    <link rel="stylesheet" href="{% static 'css/news/style.css' %}">
+    <h1 style="display: block; color: #ff3333; text-align: center;
+                    padding: 14px 16px; text-decoration: none;
+                    font-family: Impact, Charcoal, sans-serif;
+                    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;"
+                    >LATEST ANNOUNCEMENTS</h1>
+    <div class="vl" style="left: 0%; background-color: #F4511E;"></div>
+    <div class="vl" style="left: 25%; background-color: #1E88E5;"></div>
+    <div class="vl" style="left: 50%; background-color: #FFEE58;"></div>
+    <div class="vl" style="left: 75%; background-color: #00E676;"></div>
+    <div class="column" align="center">
+        <div class="row wavyborder" style="border-image: url('{% static 'images/news/wavy-border.png' %}') 100 round; ">
+            <div class="card">
+                <h3 class="arl" style="color: #2F4F4F;">a NEW PLAYAREA is now available for kids. YIPPIE..!!</h3>
+                <p class="para">A New and improved playarea has been designed with complete safety in mind without compromising any fun..!!</p>
+                <p class="para">Check out the images and measures taken to ensure everything we say...</p>
+            </div>
+        </div>
+
+        <div class="row wavyborder" style="border-image: url('{% static 'images/news/wavy-border.png' %}') 100 round; ">
+            <a href="{% url 'contact' %}" style="text-decoration: none;">
+                <div class="card">
+                    <h3 class="arl" style="color: #800000;">Admissions are OPEN for this season.</h3>
+                    <p class="para">Give your kid an opportunity to grow in an amazingly safe and playful environment</p>
+                    <p class="para">We are happy to announce that a new session is open now for those cute amazing dreamers...</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="row wavyborder" style="border-image: url('{% static 'images/news/wavy-border.png' %}') 100 round; ">
+            <div class="card">
+                <h3 class="arl" style="color: #4B0082;">About COVID Guidelines</h3>
+                <p class="para">Some text</p>
+                <p class="para">Some text</p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}<title>Toddler's Garden</title>{% endblock %}
+<body>
+    {% block custom_body %}
+        <link rel="stylesheet" href="{% static 'css/home/style.css' %}">
+        <div class="vl" style="left: 0%; background-color: #F4511E; width: 25%; height: 100%;"></div>
+        <div class="vl" style="left: 25%; background-color: #1E88E5; width: 25%; height: 100%;"></div>
+        <div class="vl" style="left: 50%; background-color: #FFEE58; width: 25%; height: 100%;"></div>
+        <div class="vl" style="left: 75%; background-color: #00E676; width: 25%; height: 100%;"></div>
+        <h1 style="display: block; color: #ff3333; text-align: center;
+                    padding: 14px 16px; text-decoration: none;
+                    font-family: Impact, Charcoal, sans-serif;
+                    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;"
+                    >Where growing is FUN</h1>
+
+
+<!--        <div class="w3-container">-->
+<!--            <div class="w3-padding-32 w3-yellow w3-circle" style="width:30%; color: #eed27e;">-->
+<!--                <img src="{% static 'images/home/preschool_home.png' %}" class="w3-circle" style="width:90%">-->
+<!--            </div>-->
+<!--        </div>-->
+        <br><br>
+        <div class="row" style="overflow-x: scroll; overflow: auto;">
+            <div class="w3-container column">
+                <a href="{% url 'room' %}" style="text-decoration: none;">
+                    <div class="w3-padding-32 w3-yellow w3-circle card">
+                                <img src="{% static 'images/home/preschool_home.png' %}" class="w3-circle" style="width:90%">
+                                <h3 class="arl" style="color: #ff3333;"
+                                            >Explorer's H.U.B</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="w3-container column">
+                <a href="{% url 'playarea' %}" style="text-decoration: none;">
+                    <div class="w3-padding-32 w3-red w3-circle card">
+                                <img src="{% static 'images/home/preschool_home_2.png' %}" class="w3-circle" style="width:90%">
+                                <h3 class="arl" style="color: #B2FF59;"
+                                            >PlayCave</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="w3-container column">
+                <a href="{% url 'activities' %}" style="text-decoration: none;">
+                    <div class="w3-padding-32 w3-green w3-circle card">
+                                <img src="{% static 'images/home/preschool_home_3.png' %}" class="w3-circle" style="width:90%">
+                                <h3 class="arl" style="color: #00BFFF;"
+                                            >Fun Learning</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="w3-container column">
+                <a href="{% url 'camp' %}" style="text-decoration: none;">
+                    <div class="w3-padding-32 w3-blue w3-circle card">
+                                <img src="{% static 'images/home/preschool_home_4.png' %}" class="w3-circle" style="width:90%">
+                                <h3 class="arl" style="color: #ff3333"
+                                            >Camp 'n' Care</h3>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    {% endblock %}
+</body>
+</html>

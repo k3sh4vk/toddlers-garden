@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}<title>Contact Us</title>{% endblock %}
+<body>
+{% block custom_body %}
+    <link rel="stylesheet" href="{% static 'css/contact/style.css' %}">
+    <h1 style="display: block; color: #ff3333; text-align: center;
+                    padding: 14px 16px; text-decoration: none;
+                    font-family: Impact, Charcoal, sans-serif;
+                    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;"
+                    >CONTACT US</h1>
+
+    <div class="vl" style="left: 0%; background-color: #F4511E; width: 25%; height: 100%;"></div>
+    <div class="vl" style="left: 25%; background-color: #1E88E5; width: 25%; height: 100%;"></div>
+    <div class="vl" style="left: 50%; background-color: #FFEE58; width: 25%; height: 100%;"></div>
+    <div class="vl" style="left: 75%; background-color: #00E676; width: 25%; height: 100%;"></div>
+
+
+
+{% endblock %}
+</body>
+</html>

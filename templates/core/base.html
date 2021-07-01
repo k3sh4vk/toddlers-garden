@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html style="scroll-behavior: smooth;">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block title %}<title>Toddler's Garden</title>{% endblock %}
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{% static 'css/base/style.css' %}">
+    </head>
+    <body>
+        <div>
+            <ul>
+              <li><a href="{% url 'index' %}">HOME</a></li>
+              <li><a href="{% url 'news' %}">NEWS</a></li>
+              <li><a href="{% url 'contact' %}">CONTACT</a></li>
+              <li><h1 style="display: block; color: #eed27e; transform: translateX(-50%);
+                            left: 50%; line-height: 1; position: absolute; text-decoration: none;
+                            font-family: Impact, Charcoal, sans-serif">Toddler's Garden</h1></li>
+              {% block session_block %}
+              {% endblock %}
+              {% if loggedin %}
+                <li style="float:right"><a class="active" href="#logout">LOGOUT</a></li>
+              {% else %}
+                <li style="float:right"><a class="active" href="#" onclick="document.getElementById('id01').style.display='block'">LOGIN/SIGN UP</a>
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-panel w3-round-xxlarge">
+                        <div class="w3-container">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright" style="">&times;</span>
+                            <div align="center">
+                                <button class="button button3">8px</button>
+                            </div>
+                                <p style="overflow: hidden; text-decoration: none; font-family: Century Gothic, sans-serif; position: relative;">Some text. Some text. Some text.</p>
+                                <p style="overflow: hidden; text-decoration: none; font-family: Century Gothic, sans-serif; position: relative;">Some text. Some text. Some text.</p>
+                                {% block login_signup_block %}
+                                {% endblock %}
+                        </div>
+                    </div>
+                </div>
+                </li>
+              {% endif %}
+            </ul>
+        </div>
+
+        {% block custom_body %}
+        {% endblock %}
+    </body>
+</html>

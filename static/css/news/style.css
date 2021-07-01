@@ -1,0 +1,80 @@
+.column {
+  float: center;
+  width: 100%;
+  padding: 0 20%;
+}
+
+.row {
+    top: 0;
+    margin: 0 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 8px;
+    transition: transform .5s;
+    }
+
+.row:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+/* Clear floats after the columns */
+.content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  border: 0;
+  border-radius: 16px;
+  background-color: #FFD700;
+}
+
+.vl {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index:-1;
+}
+
+.wavyborder {
+    border: 12px double green;
+    background-clip: padding-box;
+    padding: 10px;
+    border-image-outset:31px;
+    border-image-width:auto;
+    border-image-slice:17px;
+}
+
+.arl {
+    display: block;
+    text-align: center;
+    padding: 2px 3px;
+    font-family: 'Bradley Hand', cursive;
+    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;
+}
+
+.arl:hover {
+    text-decoration: underline wavy .2em purple;
+}
+
+.para {
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 1px;
+    color: #FF0000;
+}
