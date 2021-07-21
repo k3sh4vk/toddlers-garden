@@ -57,6 +57,7 @@ input[type="number"] {
     font-size: 16px;
     transition-duration: 0.4s;
     font-family: 'Bradley Hand', cursive;
+    font-weight: bold;
     }
 
 .button:hover {
